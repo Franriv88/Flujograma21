@@ -36,8 +36,10 @@
 </head>
 <body>
     <h1>BIENVENDIDO! <?php echo $_SESSION["usuario"] ?> </h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui iste repellendus doloribus dignissimos sapiente.
-        Non, cum itaque obcaecati dolorum cupiditate blanditiis voluptate ad sit commodi sed dicta tempore numquam laboriosam.</p>
+    <p class="p-bienvenida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, aliquam est. Dolorem beatae praesentium alias numquam nisi error quaerat? Libero totam suscipit facilis, doloribus odit ducimus quasi maiores ab tempora!
+    Debitis ullam laudantium veniam culpa minus dignissimos, voluptate, ea quae natus rerum explicabo? Doloribus illum voluptatum quis accusantium dolores harum, dicta nobis fugiat aliquam inventore dolore facere, ut autem atque.
+    Aperiam quos suscipit, exercitationem velit ad maxime eius esse debitis eveniet nam non autem tenetur corrupti laudantium asperiores alias facilis quidem nostrum omnis porro sapiente obcaecati. Delectus vero ducimus pariatur?
+    Commodi magni debitis nostrum. Sequi, labore ullam? Nobis quaerat sint molestias! Eligendi sequi cum similique soluta, enim velit adipisci, facere dolorem perspiciatis libero, quo eius? Ducimus debitis similique ea ab!</p>
 
 <a href="cerrar.php">Carrar sesión</a>
 
