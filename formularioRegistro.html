@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="formulario">
+      <h1>Formulario de Registro</h1>
+        <form action="formulario.php" method="post"> <!--usa post-->
+            <div class="input-group">
+                <input class="input" type="text" placeholder="First Name" name="nombre" autocomplete="off" required>
+                <input class="input" type="text" placeholder="Last Name" name="apellido" autocomplete="off" required><br>
+                <input class="input" type="email" placeholder="nombre@flujograma.com" name="email" autocomplete="off" required><br>
+                <input class="input" type="password" placeholder="Set a Password" name="password" autocomplete="off" required>
+                <input class="input" type="password" placeholder="Confirm Password" name="confirmacionPass" autocomplete="off" required><br>
+            </div>
+            <div>
+            <p><input class="button" type="submit" value="ENVIAR"></p>  <!--todo imput de tipo submit lo que hace que se en la información en este caso a formulario.php-->
+            <div class="parrafo2">
+              <p>¿Ya estás registrado? <a href="index.html"> Iniciar Sesión</a></p>
+            </div>
+            </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
