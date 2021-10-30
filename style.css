@@ -96,6 +96,28 @@ h1{
 }
 
 .p-bienvenida{
-  color: blue;
-  background-color: #EF6C00;
+  display: flex;
+  justify-content: right;
+  margin-left: 50%;
+  color: black;
+  font-style: oblique;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+/* agrupa todos los botones aca */
+.boton{
+  display: flex;
+  justify-content: right;
+  background-color: white;
+  border-radius: 5px;
+  border-color: black;
+  margin-right: 10px;
+  
+  
+}
+
+.boton a{
+  color: black;
+  text-decoration: none;
 }
