@@ -1,28 +1,6 @@
-
 <?php
-        /*es recomendable colocar el session_start();
-        al inicio del código, y lugo recibir las
-        variables (en este caso con $_POST)*/
-    session_start();
-    $usuario = $_POST["usuario"];
-    $contraseña = $_POST["contraseña"];
+    session_start(); //IMPORTANTE! para mostrar el contenido de $_SESSION[ ] debes usar siempre session_start();
 
-
-    if(isset($_REQUEST["Login"]) && empty($usuario)){
-        echo "Debe ingresar un nombre antes de enviar";
-        header("Location:index.html");
-        die();
-        }else if($usuario == "Francisco" && $contraseña == 123){
-            $_SESSION["usuario"] = $usuario; //estoy creando una variable de sesión que contiene el nombre del/los usuario(s)
-            }else if($usuario == "Hernan" && $contraseña == 456){
-                $_SESSION["usuario"] = $usuario;
-                }else{
-                    echo "Alguna o ambas credenciales son incorrectas";
-                    echo "<br>";
-                    echo "¿Quiere intentarlo de nuevo?";
-                 // header("Location:formularioRegistro.html"); //si las credenciales son inválidas nos redirige al formulario de registro
-                die(); //usamos die(); para que la acción finalice acá
-                }
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>BIENVENDIDO! <?php echo $_SESSION["usuario"] ?> </h1>
+    <h1>BIENVENDIDO! <?php echo $_SESSION["usuario"]; ?> </h1>
     <div class="p-bienvenida">
         <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, aliquam est. Dolorem beatae praesentium alias numquam nisi error quaerat? Libero totam suscipit facilis, doloribus odit ducimus quasi maiores ab tempora!
         Debitis ullam laudantium veniam culpa minus dignissimos, voluptate, ea quae natus rerum explicabo? Doloribus illum voluptatum quis accusantium dolores harum, dicta nobis fugiat aliquam inventore dolore facere, ut autem atque.
