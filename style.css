@@ -9,11 +9,14 @@ body{
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-image: url("./imagenes/hexaAZBL.jpg");
+  *background-color: indigo;
+  background-image: url("./imagenes/hexaVNN.jpg");
   background-size: cover;
   font-family: sans-serif;
 
 }
+
+
 
 .contLogin{
   display: flex;
@@ -100,15 +103,17 @@ h1{
   display: flex;
   justify-content: right;
   margin-left: 50%;
-  color: black;
+  color: white;
   font-style: oblique;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: purple;
+  background:rgba(0,0,0,0.7);
+  padding: 20px;
+
 }
 
 /* agrupa todos los botones aca */
 #main-container{
-  background-color: red;
+  background-color: rgb(124, 116, 116);
 }
 
 .btn{
@@ -118,6 +123,7 @@ h1{
   padding: 20px 15px;
 }
 
+
 /* CARRERAS */
 .container-card{
   display: flex;
@@ -125,11 +131,15 @@ h1{
   width: 100%;
   max-width: 1100px;
   justify-content: center;
-  
 }
 
 .card-father{
   *margin: 20px; /* el * antes del margin indica que no lo está aplicando en este momento */
+  perspective: 1000px;
+}
+
+.card-father:active .card{
+  transform: rotateY(180deg) translateY(-3%);
   
 }
 
@@ -141,7 +151,9 @@ h1{
   overflow: hidden;
   cursor: pointer;
   transition: all 400ms ease;
-  position: relative; /*card (padre de front y back) es relative para que ambos se junten a la misma altura
+  position: relative; /*card (padre de front y back) es relative para que ambos se junten a la misma altura */
+  transform-style: preserve-3d;
+  *background: red;
 }
 
 .card:hover{
@@ -149,14 +161,24 @@ h1{
   transform: translateY(-3%);
 }
 
-.card-front,
+.card-front, /* la "," indica que se aplica el contenido de las {} a ambas "cards" */
 .card-back{
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  background: white;
+}
+
+.card-back{
+  background-color: blue;
+}
+
+.card-front{
+  background-color: pink;
 }
 
 

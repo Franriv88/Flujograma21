@@ -2,13 +2,13 @@
 
 if(isset($_POST["enviar"])){
     if(empty($nombre)){
-        echo "<p class='error'>* Agrega tu nombre </p>";
+        echo "<p class='error'>* Agrega tu nombre </p>"; /* mensajes de error */
     }
 }
 
 if(isset($_POST["enviar"])){
     if(empty($password)){
-        echo "<p class='error'>* Agrega tu contraseña </p>";
+        echo "<p class='error'>* Agrega tu contraseña </p>"; /* mensajes de error */
     }
 }
 

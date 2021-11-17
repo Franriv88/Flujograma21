@@ -24,9 +24,9 @@
         Reiciendis fugiat animi cupiditate consequatur temporibus veniam suscipit sint doloremque id dolor, assumenda similique, eius quisquam repellendus illum modi? Deserunt omnis aspernatur in expedita doloremque eius laborum similique eaque ea.</p>
     </div >
 
-    <div id="main-container">
-        <a href="cerrar.php"  class="btn" >Carrar sesión</a>
-    </div>
+    <a href="cerrar.php"  class="btn" >Carrar sesión</a>
+    <a href="carreras.html" class="btn">Ir a Carreras!</a>
+    
 
 </body>
 </html>
