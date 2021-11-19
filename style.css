@@ -5,7 +5,7 @@
 }
 
 body{
-  display: flex;
+  display: grid;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
@@ -13,6 +13,7 @@ body{
   background-image: url("./imagenes/hexaVNN.jpg");
   background-size: cover;
   font-family: sans-serif;
+  font-size-adjust: auto;
 
 }
 
@@ -111,17 +112,83 @@ h1{
 
 }
 
-/* agrupa todos los botones aca */
+
 #main-container{
   background-color: rgb(124, 116, 116);
 }
-
-.btn{
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 3px;
-  padding: 20px 15px;
+/* BOTONES */ /*center = btn-container, outer button = .button-glow y button = btnGo */
+.center{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content:left;
 }
+
+.outer{
+  position: relative;
+  margin: 0 50px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+
+}
+
+.button{
+  height: 40px;
+  width: 80px;
+  border-radius: 50px;
+}
+
+.outer button, .outer span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.outer button{ /*boton propiamente */
+  background: #111;
+  color: #f2f2f2;
+  z-index: 1;
+  outline: none;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.button button{ /*el relleno interno debe ser 10px menor que el fondo */
+  height: 39px;
+  width: 79px;
+  border-radius: 50px;
+}
+
+.outer span{
+  height: 100%;
+  width: 100%;
+  background: inherit; /*inherit hace que el elemento al cual se aplica tome el valor caluclado de la propiedad de su elemento padre */
+}
+
+.button span{
+  border-radius: 50px;
+}
+.outer span:nth-child(1){ /*primer span*/
+  filter: blur(7px);  
+}
+.outer span:nth-child(2){ /*segundo span */
+  filter: blur(14px);
+}
+
+.outer{
+  animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+
 
 
 /* CARRERAS */
@@ -136,9 +203,7 @@ h1{
   margin: 5px; /* el * antes del margin indica que no lo está aplicando en este momento */
   -webkit-perspective: 800px;
   perspective: 800px;
-  
-  
-  
+
 }
 
 .card-father:hover .card{
@@ -160,7 +225,7 @@ h1{
   cursor: pointer;
   transition: all 600ms ease;
   position: relative; /*card (padre de front y back) es relative para que ambos se junten a la misma altura */
-  background: orangered;
+  background: black;
   transform-style: preserve-3d;
 }
 
@@ -176,25 +241,30 @@ h1{
   left: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  
+  justify-content: center;
 }
 
 .card-back{
   transform: rotateY(180deg);
   padding: 15px;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  text-align: center;
+  text-align:justify;
   color: white;
   font-family: 'Courier New', Courier, monospace;
+  background-color: balck;
+  border-radius: 30px;
+  
 }
 
 .card-front{
   width: 100%;
+  
 }
 
 h2{
   color: goldenrod;
+  text-align: center;
   padding: 10px;
 }
 
@@ -216,4 +286,94 @@ h2{
   background-image: url(./imagenes/Cards/DiseñoDeVideojuegos.jpg);
   background-size: cover;
   border-radius: 30px;
+}
+
+.card4{
+  background-image: url(./imagenes/Cards/DiseñoDeVideojuegos.jpg);
+  background-size: cover;
+  border-radius: 30px;
+}
+
+.card5{
+  background-image: url(./imagenes/Cards/DiseñoDeVideojuegos.jpg);
+  background-size: cover;
+  border-radius: 30px;
+}
+
+.card6{
+  background-image: url(./imagenes/Cards/DiseñoDeVideojuegos.jpg);
+  background-size: cover;
+  border-radius: 30px;
+}
+
+/*prueba de botones glow */
+.center{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content:left;
+}
+
+.outer{
+  position: relative;
+  margin: 0 50px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+
+}
+
+.button{
+  height: 40px;
+  width: 80px;
+  border-radius: 50px;
+}
+
+.outer button, .outer span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.outer button{ /*boton propiamente */
+  background: #111;
+  color: #f2f2f2;
+  z-index: 1;
+  outline: none;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.button button{ /*el relleno interno debe ser 10px menor que el fondo */
+  height: 39px;
+  width: 79px;
+  border-radius: 50px;
+}
+
+.outer span{
+  height: 100%;
+  width: 100%;
+  background: inherit; /*inherit hace que el elemento al cual se aplica tome el valor caluclado de la propiedad de su elemento padre */
+}
+
+.button span{
+  border-radius: 50px;
+}
+.outer span:nth-child(1){ /*primer span*/
+  filter: blur(7px);  
+}
+.outer span:nth-child(2){ /*segundo span */
+  filter: blur(14px);
+}
+
+.outer{
+  animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
 }

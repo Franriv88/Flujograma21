@@ -32,7 +32,7 @@ $password = $_POST['contraseña'];
                   </label>
                 </div>
                 <div class="botonLogin">
-                  <input type="submit" name="enviar">
+                  <input type="submit" name="enviar"> <!-- type="submit" es lo que me permite enviar el formulario, de lo contrario usa etiqueta button -->
                   <?php
                     include("validarLogin.php"); //esto nos trae el código del archivo formulario.php
                   ?> 

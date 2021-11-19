@@ -24,8 +24,20 @@
         Reiciendis fugiat animi cupiditate consequatur temporibus veniam suscipit sint doloremque id dolor, assumenda similique, eius quisquam repellendus illum modi? Deserunt omnis aspernatur in expedita doloremque eius laborum similique eaque ea.</p>
     </div >
 
-    <a href="cerrar.php"  class="btn" >Carrar sesión</a>
-    <a href="carreras.html" class="btn">Ir a Carreras!</a>
+    <div class="center">
+        <div class="outer button">
+            <a href="index.php"><button>Cerrar Sesión</button></a>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="center">
+        <div class="outer button">
+            <a href="carreras.html"><button>Ir a Carreras</button></a>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
     
 
 </body>
