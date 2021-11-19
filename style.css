@@ -17,8 +17,6 @@ body{
 
 }
 
-
-
 .contLogin{
   display: flex;
   justify-content: center;
@@ -116,35 +114,36 @@ h1{
 #main-container{
   background-color: rgb(124, 116, 116);
 }
-/* BOTONES */ /*center = btn-container, outer button = .button-glow y button = btnGo */
-.center{
+/* BOTONES */ /*center = btn-container, outer = .button-glow y button = btnGo , luego tienes la clase button*/
+.btn-container{
   display: flex;
   text-align: center;
-  align-items: center;
+  align-items:right;
   justify-content:left;
+  
 }
 
-.outer{
+.button-glow{
   position: relative;
   margin: 0 50px;
   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
 
 }
 
-.button{
+.btnGo{
   height: 40px;
-  width: 80px;
+  width: 40px;
   border-radius: 50px;
 }
 
-.outer button, .outer span{
+.button-glow button, .button-glow span{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.outer button{ /*boton propiamente */
+.button-glow button{ /*boton propiamente */
   background: #111;
   color: #f2f2f2;
   z-index: 1;
@@ -153,9 +152,9 @@ h1{
   cursor: pointer;
 }
 
-.button button{ /*el relleno interno debe ser 10px menor que el fondo */
+.btnGo button{ /*el relleno interno debe ser 10px menor que el fondo */
   height: 39px;
-  width: 79px;
+  width: 39px;
   border-radius: 50px;
 }
 
@@ -165,17 +164,17 @@ h1{
   background: inherit; /*inherit hace que el elemento al cual se aplica tome el valor caluclado de la propiedad de su elemento padre */
 }
 
-.button span{
+.button-glow span{
   border-radius: 50px;
 }
-.outer span:nth-child(1){ /*primer span*/
+.button-glow span:nth-child(1){ /*primer span*/
   filter: blur(7px);  
 }
-.outer span:nth-child(2){ /*segundo span */
+.button-glow span:nth-child(2){ /*segundo span */
   filter: blur(14px);
 }
 
-.outer{
+.button-glow{
   animation: rotate 1.5s linear infinite;
 }
 
