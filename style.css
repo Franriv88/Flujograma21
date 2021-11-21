@@ -202,6 +202,7 @@ h1{
   margin: 5px; /* el * antes del margin indica que no lo está aplicando en este momento */
   -webkit-perspective: 800px;
   perspective: 800px;
+  
 
 }
 
@@ -209,6 +210,7 @@ h1{
   transform: translateY(-3%);
   box-shadow: 5px 5px 10px rgba(0,0,0,0.5); /*intesidad de sombreado hover */
   justify-content: center;
+  
 } 
 
 .card-father:active .card{
@@ -245,15 +247,16 @@ h1{
 
 .card-back{
   transform: rotateY(180deg);
-  padding: 15px;
+  margin: auto;
+  margin-top: none;
   justify-content:center;
   align-items: center;
-  text-align:justify;
+  text-align:auto;
   color: white;
   font-family: 'Courier New', Courier, monospace;
   background-color: balck;
   border-radius: 30px;
-  
+  position:relative;
 }
 
 .card-front{
@@ -261,10 +264,16 @@ h1{
   
 }
 
+.card-text{
+  position: absolute;
+  padding: 2px 10px 0px 10px;
+  justify-content: auto;
+}
+
 h2{
   color: goldenrod;
   text-align: center;
-  padding: 10px;
+  padding: 5px 1px 10px 1px;
 }
 
 
