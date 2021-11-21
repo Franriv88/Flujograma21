@@ -24,6 +24,7 @@
         Reiciendis fugiat animi cupiditate consequatur temporibus veniam suscipit sint doloremque id dolor, assumenda similique, eius quisquam repellendus illum modi? Deserunt omnis aspernatur in expedita doloremque eius laborum similique eaque ea.</p>
     </div >
 
+    <div class="botones-menu">
     <div class="center">
         <div class="outer button">
             <a href="index.php"><button>Cerrar Sesión</button></a>
@@ -37,6 +38,7 @@
             <span></span>
             <span></span>
         </div>
+    </div>
     </div>
     
 
