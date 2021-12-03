@@ -24,4 +24,8 @@
   }
   echo "Connected successfully";
     
+
+  // consulta a la BD
+  $qery = "SELECT * FROM usuarios"; //esta no es una buena práctica
+  var_dump($qery);
 ?>
