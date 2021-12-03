@@ -9,16 +9,19 @@
 
   // array Asociativo: $datos_conexion = array("servidor" => "localhost", "usuario" => "root", "clave" => "", "basededatos" => "estudiantes");
   //$concexion = mysqli_connect($datos_conexion["servidor], $datos_conexion["root], $datos_conexion["clave"], $datos_conexion["basededatos"] );
-
-  // forma sencilla:
-  $conexion = mysqli_connect("localhost", "root", "", "estudiantes");
-
-  if(!$conexion){
-      die("Error al conectar la base de datos");
-      
-  }else{
-      echo "Base de Datos conectada";
+  
+  //método aprendido del manual de PHP https://www.php.net/function.mysqli-connect
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  
+  // Create connection
+  $conn = new mysqli($servername, $username, $password);
+  
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
   }
-
+  echo "Connected successfully";
     
 ?>
