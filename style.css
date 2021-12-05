@@ -127,7 +127,7 @@ h1{
 
 .button-glow{ /* botón circular de Go! */
   position: relative;
-  margin: 355px 1px 0px 1px;
+  margin: 355px 0px 0px 130px ;
   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
 }
 
@@ -282,16 +282,16 @@ h1{
 }
 
 .card-father:hover .card{
-  transform: translateY(-3%);
+  transform: rotateY(180deg) translateY(-3%);
   box-shadow: 5px 5px 10px rgba(0,0,0,0.5); /*intesidad de sombreado hover */
   justify-content: center;
   
 } 
-
-.card-father:active .card{
-  transform: rotateY(180deg) translateY(-3%);
-  
-}
+/*
+.card-father:hover .card{
+  acá pon el linkeo a Flujograma con el checkbox
+} 
+*/
 
 .card{
   width: 300px;
