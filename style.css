@@ -7,9 +7,7 @@
 body{
   display: grid;
   flex-direction: column;
-  *min-height: 100vh;
   margin: 0;
-  *background-color: indigo;
   background-image: url("./imagenes/hexaVNN.jpg");
   background-size: cover;
   font-family: sans-serif;
@@ -354,39 +352,44 @@ h2{
 
 
 .card1{
-  background-image: url(./imagenes/Cards/DiseñoDeVideojuegos.jpg);  
-  background-size: cover;
+  background-image: url(./imagenes/Cards/DiseñoMultimedial.png);  
+  background-size:305px 405px;
   border-radius: 30px;
 }
 
 .card2{
-  background-image: url(./imagenes/Cards/DiseñoDeVideojuegos.jpg);
+  background-image: url(./imagenes/Cards/CineAnimacion.png);
   background-size: cover;
+  background-size:305px 405px;
   border-radius: 30px;
 
 }
 
 .card3{
-  background-image: url(./imagenes/Cards/DiseñoDeVideojuegos.jpg);
+  background-image: url(./imagenes/Cards/DiseñoVideoJuegos.png);
   background-size: cover;
+  background-size:305px 405px;
   border-radius: 30px;
 }
 
 .card4{
-  background-image: url(./imagenes/Cards/DiseñoDeVideojuegos.jpg);
+  background-image: url(./imagenes/Cards/DiseñoGrafico.png);
   background-size: cover;
+  background-size:305px 405px;
   border-radius: 30px;
 }
 
 .card5{
-  background-image: url(./imagenes/Cards/DiseñoDeVideojuegos.jpg);
+  background-image: url(./imagenes/Cards/AnalistaSistemas.png);
   background-size: cover;
+  background-size:305px 405px;
   border-radius: 30px;
 }
 
 .card6{
-  background-image: url(./imagenes/Cards/DiseñoDeVideojuegos.jpg);
+  background-image: url(./imagenes/Cards/DiseñoWebMobile.png);
   background-size: cover;
+  background-size:305px 405px;
   border-radius: 30px;
 }
 
