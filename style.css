@@ -402,16 +402,37 @@ img{
 
 .flujograma{
   width: 85%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin-left: auto;  /*los margin left y right son para alinear de forma horizontal */
   margin-right: auto;
   background-color: blue;
   display: grid;
+  gap: 1rem;
   justify-content:center; /*todo el contenido queda centrado dentro del div*/
   grid-auto-rows: 200px; /*tamaño de fila de 200px*/
   grid-template-columns: repeat(auto-fit, 133px) /*agregamos las columnas que quepan de 133px*/
+  
 }
 
 .asignatura{
-  clip-path: polygon(50% 0%, 108% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /*construimos los hexágonos*/
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /*construimos los hexágonos*/
+  grid-column: span 2; /*(133px)*2 + 1 rem = 266px + 17px = 283px*/
+  height: 283px; /*alto de los hexágonos*/
+  transition: 0.5s filter;
+}
+
+.asignatura:hover{
+  filter: brightness(1000);
+  
+}
+
+.asignatura:first-of-type{
+  grid-column: 2 / span 2; /*esto quiere decir que el 2° elemento que tenga la clase "asignatura" va a iniciar en la 2da grid line y a partir de ahí se va a abarcar 2 columnas */
+}
+
+/*MEDIA QUERIES*/
+@media screen and (min-widht: 270px) and (max-widht: 290px) {
+  .asignatura:first-of-type{
+    grid-column: 1 / span 2; 
+  }
 }
