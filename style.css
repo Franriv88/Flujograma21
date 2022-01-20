@@ -407,17 +407,18 @@ img{
   margin-right: auto;
   background-color: blue;
   display: grid;
-  gap: 1rem;
+  /*gap: .1rem; es como el padding*/
+  grid-row-gap: 0rem;
   justify-content:center; /*todo el contenido queda centrado dentro del div*/
   grid-auto-rows: 200px; /*tamaño de fila de 200px*/
-  grid-template-columns: repeat(auto-fit, 133px) /*agregamos las columnas que quepan de 133px*/
+  grid-template-columns: repeat(auto-fit, 38px) /*agregamos las columnas que quepan de 133px*/
   
 }
 
 .asignatura{
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /*construimos los hexágonos*/
   grid-column: span 2; /*(133px)*2 + 1 rem = 266px + 17px = 283px*/
-  height: 283px; /*alto de los hexágonos*/
+  height: 183px; /*alto de los hexágonos*/
   transition: 0.5s filter;
 }
 
@@ -426,7 +427,7 @@ img{
   
 }
 
-.asignatura:first-of-type{
+.asignatura:nth-of-type(5n+4){
   grid-column: 2 / span 2; /*esto quiere decir que el 2° elemento que tenga la clase "asignatura" va a iniciar en la 2da grid line y a partir de ahí se va a abarcar 2 columnas */
 }
 
